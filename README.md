@@ -1,2 +1,0 @@
-# Storymaps
-leaflet storymaps projects
