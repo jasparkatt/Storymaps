@@ -13,7 +13,7 @@ var layers = {
         legend: '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'
     },
     layer2: {
-        layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/Data/SpotX.geojson', {
+        layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/SpotX.geojson', {
             pointToLayer: function(feature, latlng) {
                 return L.circleMarker(latlng, geojsonMarkerOptions);
             }
