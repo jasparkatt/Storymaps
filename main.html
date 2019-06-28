@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <title>Hello World</title>
+    <title>Central Sands Rambler</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--add required stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!--leaflet css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -19,9 +21,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./src/storymap.2.5.css">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
 
     <!--add required libraries-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <!--jquery and Popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -43,13 +47,13 @@
             <div class="col-sm-6 col-md-8 storymap-map"></div>
             <div class="col-sm-6 col-md-4 storymap-story">
                 <section data-scene="scene1">
-                    <h2>scene 1</h2>
+                    <h2>Rambling in Wisconsin</h2>
                 </section>
                 <section data-scene="scene2">
-                    <h2>scene 2</h2>
+                    <h2>The Central Sands</h2>
                 </section>
                 <section data-scene="scene3">
-                    <h2>scene 3</h2>
+                    <h2>The Driftless Area</h2>
                 </section>
             </div>
         </div>
@@ -70,7 +74,7 @@
         createMap: function() {
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false
-            }).setView([44, -120], 7);
+            }).setView([44, -90], 17);
             basemap = this.baselayer.layer.addTo(map);
             return map;
         }
