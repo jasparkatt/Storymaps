@@ -3,3 +3,12 @@ wisconsin county bounds
 https://opendata.arcgis.com/datasets/8b8a0896378449538cf1138a969afbc6_3.geojson
 
 https://dnrmaps.wi.gov/arcgis/rest/services/DW_Map_Dynamic/EN_Basic_Basemap_WTM_Ext_Dynamic_L16/MapServer/3/query?outFields=*&where=1%3D1
+
+use mapbox to create a background tile for the central sands and driftless countyies 
+can then drop the WDRN mapservice for county bounds...whcih is mucking things up speed wise.
+clip coulnty shp to just what you need...take into mapbox and style a tile for those counties ...use that as background layer for
+central sands and driftless scenses
+
+https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}
+
+https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
