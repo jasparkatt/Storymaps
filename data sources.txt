@@ -1,0 +1,5 @@
+wisconsin county bounds
+
+https://opendata.arcgis.com/datasets/8b8a0896378449538cf1138a969afbc6_3.geojson
+
+https://dnrmaps.wi.gov/arcgis/rest/services/DW_Map_Dynamic/EN_Basic_Basemap_WTM_Ext_Dynamic_L16/MapServer/3/query?outFields=*&where=1%3D1
