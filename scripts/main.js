@@ -1,3 +1,4 @@
+
 var geojsonMarkerOptions = {
     radius: 5,
     fillColor: "#3232ff",
@@ -12,13 +13,13 @@ var CntyBndOptions = {
     opacity: 0.65,
 	dashArray: '5',
 	fillOpacity: 0.1,
-	fillColor: "none"
+    fillColor: "none"
 	};
 
 var layers = {
     layer5: {
         layer:L.geoJson.ajax('https://opendata.arcgis.com/datasets/8b8a0896378449538cf1138a969afbc6_3.geojson', {
-            style:CntyBndOptions
+            style:CntyBndOptions,            
         })
      },
     layer4: {
@@ -39,7 +40,7 @@ var layers = {
     }
 };
 var scenes = {
-    scene1: { lat: 44, lng: -91.00, zoom: 7, layers: [layers.layer2], name: "scene 1" },
+    scene1: { lat: 44.63, lng: -90.5, zoom: 7, layers: [ layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 1" },
     scene2: { lat: 44.05, lng: -89.6, zoom: 10, layers: [ layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 2" },
     scene3: { lat: 43.5, lng: -90.95, zoom: 9.3, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 3" }
 };

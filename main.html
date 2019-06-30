@@ -62,7 +62,7 @@
 <script type="text/javascript">
     $('#storymap').storymap({
         scenes: scenes,
-        baselayer: layers.layer3,
+        // baselayer: layers.layer3,
         legend: true,
         loader: true,
         flyto: true,
@@ -74,8 +74,8 @@
         createMap: function() {
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false
-            }).setView([44, -90], 17);
-            basemap = this.baselayer.layer.addTo(map);
+            }).setView([44, -89.75], 17);
+            // basemap = this.baselayer.layer.addTo(map);
             return map;
         }
     });
