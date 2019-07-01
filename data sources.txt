@@ -12,3 +12,10 @@ central sands and driftless scenses
 https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}
 
 https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
+
+https://drive.google.com/file/d/0Bzm4t5YOGmWJeTI0ZHFxd1NQaHc/view?usp=sharing
+
+https://drive.google.com/file/d/0Bzm4t5YOGmWJQnNkemFvanI0ODQ/view?usp=sharing
+
+https://drive.google.com/file/d/0Bzm4t5YOGmWJNDlWOVRBSHJFeTg/view?usp=sharing
+
