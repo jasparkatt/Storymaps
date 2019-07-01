@@ -17,8 +17,9 @@
     <!--add favicon for the web page-->
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
-    <!--Font-->
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <!--Font Used by css selectors and inline in Storymap scripts and my scripts-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Philosopher|Lora">
 
     <link rel="stylesheet" type="text/css" href="./src/storymap.2.5.css">
     <link rel="stylesheet" type="text/css" href="./style/main.css">
@@ -48,36 +49,43 @@
             <div class="col-sm-6 col-md-4 storymap-story">
                 <section data-scene="scene1">
                     <h2>Rambling in Wisconsin</h2>
+                    <p><em>"You can't say enough about fishing. Though the sport of kings, it's just what the deadbeat ordered."</em><br> ~ Thomas McGuane <cite>The Longest Silence</cite></p>
                 </section>
                 <section data-scene="scene2">
                     <h2>The Central Sands</h2>
+                    <p>blah...blah..blah...blah...blah</p>
+                    <img src="./img/HomeWater.jpg" class="img-responsive" alt="responsive image" alt-text="the central sands of wisconsin">
+                    <p>blah...blah..blah...blah...blah</p>
                 </section>
                 <section data-scene="scene3">
                     <h2>The Driftless Area</h2>
+                    <p></p>
                 </section>
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
-    $('#storymap').storymap({
-        scenes: scenes,
-        // baselayer: layers.layer3,
-        legend: true,
-        loader: true,
-        flyto: true,
-        credits: "Build with <i class='material-icons' style='color: red; font-size: 10px;'>favorite</i> from Bo Zhao",
-        scalebar: true,
-        scrolldown: true,
-        progressline: true,
-        navwidget: true,
-        createMap: function() {
-            var map = L.map($(".storymap-map")[0], {
-                zoomControl: false
-            }).setView([44, -89.75], 17);
-            // basemap = this.baselayer.layer.addTo(map);
-            return map;
-        }
+    $(document).ready(function() {
+        $('#storymap').storymap({
+            scenes: scenes,
+            // baselayer: layers.layer3,
+            legend: true,
+            loader: true,
+            flyto: true,
+            credits: "Build with <i class='material-icons' style='color: red; font-size: 10px;'>favorite</i> from Bo Zhao",
+            scalebar: true,
+            scrolldown: true,
+            progressline: true,
+            navwidget: true,
+            createMap: function() {
+                var map = L.map($(".storymap-map")[0], {
+                    zoomControl: false
+                }).setView([44, -89.75], 17);
+                // basemap = this.baselayer.layer.addTo(map);
+                return map;
+            }
+        })
     });
 </script>
 

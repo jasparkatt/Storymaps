@@ -1,11 +1,15 @@
 /*Updated on 02/24/2018| version 2.5 | MIT License*/
+
 html {
     height: 100%;
 }
 
+
+/* was Cairo, i swapped it out for philosopher */
+
 body {
     height: 100%;
-    font-family: Cairo, sans-serif;
+    font-family: Philosopher, sans-serif;
     font-size: 14px;
 }
 
@@ -46,9 +50,6 @@ h1 {
     display: block;
     z-index: 1000;
     background-color: rgba(238, 238, 238, 0);
-
-
-
 }
 
 .storymap-map {
@@ -69,15 +70,12 @@ h1 {
     .storymap-story {
         width: 600px;
     }
-
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-
     .storymap-story {
         width: 100%;
     }
-
     .storymap-map {
         position: fixed;
         top: 0;
@@ -90,19 +88,15 @@ h1 {
         overflow-y: hidden;
         background-color: #f5f5f5;
     }
-
     .viewing {
         background: rgba(221, 221, 221, 0.3);
     }
-
     .storymap-scroll-down {
         display: none;
     }
-
 }
 
 section {
-
     padding: 5px 15px 10px 15px;
     margin: 5px;
     border-radius: 5px;
@@ -137,6 +131,7 @@ section {
     transform: translate(-50%, -50%);
 }
 
+
 /*transparent the story panel but still able to trigger events*/
 
 .section-opacity {
@@ -157,7 +152,6 @@ section {
     font-size: 50px;
     z-index: 1003;
     animation: spin 1.2s linear infinite;
-
 }
 
 .storymap-screenloader {
@@ -201,17 +195,15 @@ section {
     background: rgba(115, 115, 115, 0.2);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-
     opacity: 0;
     filter: alpha(opacity=0);
     -moz-opacity: 0;
 }
 
-.storymap-navwidget > li {
+.storymap-navwidget>li {
     position: relative;
     display: block !important;
     cursor: pointer;
-
 }
 
 .storymap-navwidget li a {
@@ -231,6 +223,7 @@ section {
     color: rgba(218, 218, 218, 0.7);
     text-decoration: none;
 }
+
 
 /*support video in IE 8 and 9*/
 
