@@ -39,6 +39,7 @@ var layers = {
     }
 };
 var scenes = {
+    overview: { lat: 44.1347254, lng: -122.7411479, zoom: 7, name: 'Home', position: 'fullpage' },
     scene1: { lat: 44.63, lng: -90.5, zoom: 7, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 1" },
     scene2: { lat: 44.05, lng: -89.6, zoom: 10, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 2" },
     scene3: { lat: 43.5, lng: -90.95, zoom: 9.3, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 3" }
