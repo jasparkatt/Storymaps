@@ -1,6 +1,3 @@
-.sidebar {
-    /* display: none;*/
-}
 
 .main {
     padding: 20px;
@@ -132,11 +129,11 @@ h4 {
 }
 
 .end-background-img {
-    background: url(brulepic.jpg) no-repeat center center fixed;
+    background: url(./img/brulepic.jpg) no-repeat center center fixed;
 }
 
 .overview-background-img {
-    background: url(overview_fish.jpg) no-repeat center center fixed;
+    background: url(img/IC.jpg) no-repeat center center fixed;
 }
 
 .background-fullscreen-setting {
@@ -300,7 +297,7 @@ div.leg i2 {
     border: 0.2px solid #ffffff;
 }
 
-div.leg img {}
+
 
 div.leg p {
     font-size: 16px;
@@ -418,6 +415,3 @@ h5 {
     border-radius: 25px;
     border: 0.2px solid #ffffff;
 }
-
-© 2019 GitHub,
-Inc. Terms Privacy Security Status Help Contact GitHub Pricing API Training Blog About
