@@ -133,7 +133,7 @@ h4 {
 }
 
 .overview-background-img {
-    background: url(/build/img/IC.jpg) no-repeat center center fixed;
+    background: url(./build/img/IC.jpg) no-repeat center center fixed;
 }
 
 .background-fullscreen-setting {
@@ -322,7 +322,7 @@ h1 {
 }
 
 p {
-    font-family: "Inconsolata", sans-serif;
+    font-family: "Philosopher", sans-serif;
     font-size: 20px;
     display: inline;
     color: black;
@@ -334,7 +334,7 @@ p2 {
 }
 
 h2 {
-    font-family: "Inconsolata", sans-serif;
+    font-family: "Lora", sans-serif;
 }
 
 h3 {
