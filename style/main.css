@@ -129,11 +129,11 @@ h4 {
 }
 
 .end-background-img {
-    background: url(./img/brulepic.jpg) no-repeat center center fixed;
+    background: url(./build/img/brulepic.jpg) no-repeat center center fixed;
 }
 
 .overview-background-img {
-    background: url(img/IC.jpg) no-repeat center center fixed;
+    background: url(/build/img/IC.jpg) no-repeat center center fixed;
 }
 
 .background-fullscreen-setting {
