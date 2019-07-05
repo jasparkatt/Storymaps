@@ -3,6 +3,10 @@
 const {src, dest, watch, lastRun, series, parallel} = require('gulp');
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
+const cleanCss = require('gulp-clean-css');
+const htmlmin = require('gulp=htmlmin');
+
+
 
 //construct some paths
 const files = {
