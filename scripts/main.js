@@ -42,7 +42,7 @@ var geojsonMarkerOptions = {
 
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        portland: {lat: 45.5186089, lng: -122.7270297, zoom: 11, name: 'Portland', layers: []},
+        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties]},
         corvallis: {lat: 44.5701158, lng: -123.2949388, zoom: 14, name: 'Corvallis', layers: [layers.ESRI]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
