@@ -69,7 +69,7 @@ function watchImg(){
 
 function watchScripts() {
     watch([files.htmlPath, files.jsPath, files.cssPath],
-        series(htmlTask, jsTask, cssTask)),
+        series(htmlTask, jsTask, cssTask, copyTask)),
         console.log('updating build folder as something changed in your scripts');
 };
 
