@@ -6,41 +6,47 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 0.8
 };
-var CntyBndOptions = {
-    color: "#CC6600",
-    weight: 2,
-    opacity: 0.65,
-    dashArray: '5',
-    fillOpacity: 0.1,
-    fillColor: "none"
-};
 
-var layers = {
-    layer5: {
-        layer: L.geoJson.ajax('https://opendata.arcgis.com/datasets/8b8a0896378449538cf1138a969afbc6_3.geojson', {
-            style: CntyBndOptions,
-        })
-    },
-    layer4: {
-        layer: L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png')
-    },
-    // layer3: {
-    //     layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}')
-    // },
-    layer2: {
-        layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/SpotX.geojson', {
+
+    // Create Legend Contents in html format
+    var county_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Counties</b></p>';
+    var forest_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      layer1: {layer: layer1, legend: legend1},
+    //      layer2: {layer: layer2, legend: legend2}
+    //      ...
+    // }
+
+    var layers = {
+        ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
+        counties: {
+            layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/SpotX.geojson', {
             pointToLayer: function(feature, latlng) {
                 return L.circleMarker(latlng, geojsonMarkerOptions).bindTooltip(feature.properties.Stream, { className: 'label_tooltip' });
             }
         })
     },
-    layer1: {
-        layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')
-    }
-};
-var scenes = {
-    overview: { lat: 44.1347254, lng: -122.7411479, zoom: 7, name: 'Home', position: 'fullpage' },
-    scene1: { lat: 44.63, lng: -90.5, zoom: 7, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 1" },
-    scene2: { lat: 44.05, lng: -89.6, zoom: 10, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 2" },
-    scene3: { lat: 43.5, lng: -90.95, zoom: 9.3, layers: [layers.layer1, layers.layer2, layers.layer5, layers.layer4], name: "scene 3" }
-};
+        GEE: {
+            layer: L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png'),
+            legend: forest_legend
+        },
+        satellite: {
+            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                id: 'mapbox.satellite'
+            })
+        },
+        cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
+    };
+
+    var scenes = {
+        overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
+        portland: {lat: 45.5186089, lng: -122.7270297, zoom: 11, name: 'Portland', layers: []},
+        corvallis: {lat: 44.5701158, lng: -123.2949388, zoom: 14, name: 'Corvallis', layers: [layers.ESRI]},
+        eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
+        salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
+        bend: {lat: 44.0519385, lng: -89.3042125, zoom: 8, name: 'Bend', layers: [layers.counties, layers.satellite]},
+        oregon: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
+        end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
+    };
