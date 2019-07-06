@@ -6,6 +6,7 @@ const plumber = require('gulp-plumber');
 const cleanCss = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
+const copy = require('gulp-copy');
 
 
 
@@ -15,10 +16,12 @@ const files = {
     cssPath: './style/*.css',
     jsPath: './scripts/*.js',
     imgPath: './img/*',
+    corePath: './src/*.*',
     imgBuild: './build/img/',
     htmlBuild: './build/',
     cssBuild: './build/style/',
-    jsBuild: './build/scripts/'
+    jsBuild: './build/scripts/',
+    srcBuild: './build/src/'
     // imgTemp: './temp/img/'
 }
 
@@ -52,20 +55,38 @@ function htmlTask() {
         .pipe(dest(files.htmlBuild))
 }
 
+function copyTask() {
+    return src(files.corePath, {since: lastRun(copyTask)})
+        .pipe(plumber())
+        .pipe(dest(files.srcBuild));
+}
+
 //create some watchers
 function watchImg(){
     watch('./img/', imgTask);
     console.log('running imgTask...did you add some new pics?');
 };
+
+function watchScripts() {
+    watch([files.htmlPath, files.jsPath, files.cssPath],
+        series(htmlTask, jsTask, cssTask)),
+        console.log('updating build folder as something changed in your scripts');
+};
+
+
 //export tasks
 exports.imgTask = imgTask;
 exports.cssTask = cssTask;
 exports.htmlTask = htmlTask;
 exports.jsTask = jsTask;
+exports.copyTask = copyTask;
+exports.watchImg = watchImg;
+exports.watchScripts = watchScripts;
 
 exports.rebuild = series(
     imgTask,
     htmlTask,
     cssTask,
-    jsTask
+    jsTask,
+    copyTask
 );
