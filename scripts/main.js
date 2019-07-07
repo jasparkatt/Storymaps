@@ -41,10 +41,8 @@ var classOne = {
             legend: forest_legend
         },
         satellite: {
-            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
-                id: 'mapbox.satellite'
-            })
-        },
+            layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
+
         class1: {
             layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/abv/grady-edits/src/data/Class1_min.json', {
             style: classOne
@@ -55,7 +53,7 @@ var classOne = {
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
         centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties, layers.class1]},
-        corvallis: {lat: 44.5701158, lng: -123.2949388, zoom: 14, name: 'Corvallis', layers: [layers.ESRI]},
+        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
         bend: {lat: 44.09, lng: -89.3042125, zoom: 9, name: 'Bend', layers: [layers.counties, layers.satellite]},
