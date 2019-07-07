@@ -37,7 +37,7 @@ var classOne = {
         })
     },
         GEE: {
-            layer: L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png'),
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/jasparkatt/cjxtgxkcs87at1cpoc3b4svt0.html?fresh=true&title=true&access_token=pk.eyJ1IjoiamFzcGFya2F0dCIsImEiOiJ0dFVNWUxvIn0.c2iL93m2nRg0gnqSlm5bhA#8.0/44.716105/-90.012333/0'),
             legend: forest_legend
         },
         satellite: {
@@ -57,6 +57,6 @@ var classOne = {
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
         driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.class1, layers.ESRI, layers.counties]},
-        oregon: {lat: 44.0000000, lng: -89.6, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
+        oregon: {lat: 44.0000000, lng: -89.6, zoom: 9, name: 'Oregon State', layers: [layers.GEE]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
