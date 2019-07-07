@@ -8,11 +8,11 @@ var geojsonMarkerOptions = {
 };
 
 var classOne = {
-    "color": "#2d13bf",
-    "weight": 4,
-    "opacity": 0.5,
-    "dashArray": '4',
-    "fillOpacity": 0.4
+    "color": "#3232ff",
+    "weight": 2,
+    "opacity": 0.8,
+    "dashArray": '3',
+    "fillOpacity": 0.6
 };
 
 
