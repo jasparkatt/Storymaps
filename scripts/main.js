@@ -8,7 +8,7 @@ var geojsonMarkerOptions = {
 };
 
 var classOne = {
-    "color": "#3232ff",
+    "color": "#7380D8",
     "weight": 2,
     "opacity": 0.8,
     "dashArray": '3',
@@ -44,7 +44,7 @@ var classOne = {
             layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
 
         class1: {
-            layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/abv/grady-edits/src/data/Class1_min.json', {
+            layer: L.geoJson.ajax('https://opendata.arcgis.com/datasets/a95d409126754d349ecc565698683d9e_9.geojson', {
             style: classOne
         })},
         cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
@@ -56,7 +56,7 @@ var classOne = {
         wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
-        bend: {lat: 44.09, lng: -89.3042125, zoom: 9, name: 'Bend', layers: [layers.counties, layers.ESRI]},
+        driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.class1, layers.ESRI, layers.counties]},
         oregon: {lat: 44.0000000, lng: -89.6, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
