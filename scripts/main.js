@@ -44,7 +44,7 @@ var classOne = {
             layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
 
         class1: {
-            layer: L.geoJson.ajax('https://opendata.arcgis.com/datasets/a95d409126754d349ecc565698683d9e_9.geojson', {
+            layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/newSpotX.geojson', {
             style: classOne
         })},
         cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}

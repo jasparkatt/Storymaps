@@ -1,0 +1,38 @@
+{
+    "version": 8,
+    "name": "Blank",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:sdk-support": {
+            "js": "0.54.0",
+            "android": "6.7.0",
+            "ios": "4.7.0"
+        }
+    },
+    "center": [-90.01233291625977, 44.71610450744629],
+    "zoom": 8,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {"url": "mapbox://jasparkatt.7gdind8j", "type": "vector"}
+    },
+    "sprite": "mapbox://sprites/jasparkatt/cjxtgxkcs87at1cpoc3b4svt0/ck2u8j60r58fu0sgyxrigm3cu",
+    "glyphs": "mapbox://fonts/jasparkatt/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "newspotx-0dbpdj",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "newSpotX-0dbpdj",
+            "layout": {},
+            "paint": {"line-color": "hsla(229, 94%, 64%, 0.85)"}
+        }
+    ],
+    "created": "2019-07-07T21:28:14.306Z",
+    "id": "cjxtgxkcs87at1cpoc3b4svt0",
+    "modified": "2019-07-07T22:57:30.273Z",
+    "owner": "jasparkatt",
+    "visibility": "public",
+    "draft": false
+}

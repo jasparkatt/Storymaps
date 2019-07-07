@@ -23,3 +23,7 @@ https://drive.google.com/file/d/0Bzm4t5YOGmWJNDlWOVRBSHJFeTg/view?usp=sharing
 Consolas, 'Courier New', monospace
 
 https://raw.githubusercontent.com/jasparkatt/abv/grady-edits/src/data/Class1_min.json
+
+https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/newSpotX.geojson
+
+mapbox://styles/jasparkatt/cjxtgxkcs87at1cpoc3b4svt0
