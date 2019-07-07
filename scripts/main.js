@@ -28,7 +28,7 @@ var classOne = {
     // }
 
     var layers = {
-        ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
+        ESRI: {layer: L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade_Dark/MapServer/tile/{z}/{y}/{x}')},
         counties: {
             layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/SpotX.geojson', {
             pointToLayer: function(feature, latlng) {
@@ -56,7 +56,7 @@ var classOne = {
         wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
-        bend: {lat: 44.09, lng: -89.3042125, zoom: 9, name: 'Bend', layers: [layers.counties, layers.satellite]},
+        bend: {lat: 44.09, lng: -89.3042125, zoom: 9, name: 'Bend', layers: [layers.counties, layers.ESRI]},
         oregon: {lat: 44.0000000, lng: -89.6, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
