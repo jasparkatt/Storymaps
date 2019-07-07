@@ -7,6 +7,14 @@ var geojsonMarkerOptions = {
     fillOpacity: 0.8
 };
 
+var classOne = {
+    "color": "#2d13bf",
+    "weight": 4,
+    "opacity": 0.5,
+    "dashArray": '4',
+    "fillOpacity": 0.4
+};
+
 
     // Create Legend Contents in html format
     var county_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Counties</b></p>';
@@ -37,16 +45,20 @@ var geojsonMarkerOptions = {
                 id: 'mapbox.satellite'
             })
         },
+        class1: {
+            layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/abv/grady-edits/src/data/Class1_min.json', {
+            style: classOne
+        })},
         cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
     };
 
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties]},
+        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties, layers.class1]},
         corvallis: {lat: 44.5701158, lng: -123.2949388, zoom: 14, name: 'Corvallis', layers: [layers.ESRI]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
         salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
-        bend: {lat: 44.0519385, lng: -89.3042125, zoom: 8, name: 'Bend', layers: [layers.counties, layers.satellite]},
-        oregon: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
+        bend: {lat: 44.09, lng: -89.3042125, zoom: 9, name: 'Bend', layers: [layers.counties, layers.satellite]},
+        oregon: {lat: 44.0000000, lng: -89.6, zoom: 7, name: 'Oregon State', layers: [layers.GEE]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
