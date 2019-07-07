@@ -28,7 +28,7 @@ const files = {
 function imgTask() {
     return src(files.imgPath, { since: lastRun(imgTask) })
                 .pipe(plumber())
-                .pipe(imagemin())
+                .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
                 .pipe(dest(files.imgBuild))
                 // .pipe(dest(files.imgTemp))
 }
