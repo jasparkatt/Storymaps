@@ -1,17 +1,17 @@
 var geojsonMarkerOptions = {
-    radius: 5,
-    fillColor: "#3232ff",
-    color: "#ffff00",
-    weight: 0.5,
-    opacity: 1,
-    fillOpacity: 0.8
+    radius: 4,
+    fillColor: "#f78102",
+    color: "#0a121f",
+    weight: 0.4,
+    opacity: 0.7,
+    fillOpacity: 0.5
 };
 
 var classOne = {
     "color": "#7380D8",
-    "weight": 2,
+    "weight": 1.5,
     "opacity": 0.8,
-    "dashArray": '3',
+    "dashArray": '1',
     "fillOpacity": 0.6
 };
 
@@ -52,11 +52,11 @@ var classOne = {
 
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties, layers.class1]},
-        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
+        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties]},
+        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite]},
         eugene: {lat: 44.0549563, lng: -123.0958048, zoom: 13, name: 'Eugene', layers: []},
-        salem: {lat: 44.9419055, lng: -123.0356407, zoom: 13, name: 'Salem', layers: []},
-        driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.class1, layers.ESRI, layers.counties]},
-        oregon: {lat: 44.0000000, lng: -89.6, zoom: 9, name: 'Oregon State', layers: [layers.GEE]},
+        salem: {lat: 44.09419055, lng: -89.60356407, zoom: 9, name: 'Salem', layers: []},
+        driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.ESRI, layers.counties]},
+        wisconsin: {lat: 44.7, lng: -90.95, zoom: 7, name: 'Wisconsin State', layers: [layers.class1, layers.counties]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
