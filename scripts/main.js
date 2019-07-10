@@ -14,7 +14,7 @@ var classOne = {
     dashArray: '1',
     fillOpacity: 0.6
 };
-
+L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjand1dnRhbWowMGJtNDNwYndwamFnbDc3In0.CIQzTl7-lEJLZm9z2MaaoA'; 
 
     // Create Legend Contents in html format
     var county_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Counties</b></p>';
@@ -44,9 +44,8 @@ var classOne = {
             layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
 
         class1: {
-            layer: L.geoJson.ajax('https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/newSpotX.geojson', {
-            style: classOne
-        })},
+            layer: L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89')},
+
         cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
     };
 
@@ -57,6 +56,6 @@ var classOne = {
         westfork: {lat: 43.5, lng: -90.95, zoom: 10, name: 'Avalanche', layers: [layers.counties]},
         salem: {lat: 44.09419055, lng: -89.60356407, zoom: 9, name: 'Salem', layers: [layers.counties]},
         driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.ESRI, layers.counties]},
-        wisconsin: {lat: 44.7, lng: -90.95, zoom: 7, name: 'Wisconsin State', layers: [layers.class1, layers.counties]},
+        wisconsin: {lat: 44.7, lng: -90.95, zoom: 8, name: 'Wisconsin State', layers: [layers.class1, layers.counties]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
