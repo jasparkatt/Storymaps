@@ -51,11 +51,11 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjand1dnRhbWowMGJtNDNwY
 
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.counties]},
-        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite]},
-        westfork: {lat: 43.5, lng: -90.95, zoom: 10, name: 'Avalanche', layers: [layers.counties]},
+        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.class1, layers.counties]},
+        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
+        westfork: {lat: 43.5, lng: -90.95, zoom: 10, name: 'Avalanche', layers: [layers.counties, layers.class1]},
         salem: {lat: 44.09419055, lng: -89.60356407, zoom: 9, name: 'Salem', layers: [layers.counties]},
-        driftless: {lat: 43.5, lng: -90.95, zoom: 9.3, name: 'The Driftless Area', layers: [layers.ESRI, layers.counties]},
-        wisconsin: {lat: 44.7, lng: -90.95, zoom: 8, name: 'Wisconsin State', layers: [layers.class1, layers.counties]},
+        driftless: {lat: 43.5, lng: -90.95, zoom: 9, name: 'The Driftless Area', layers: [layers.ESRI, layers.class1, layers.counties]},
+        wisconsin: {lat: 44.7, lng: -90.95, zoom: 8, name: 'Wisconsin State', layers: [layers.counties]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
