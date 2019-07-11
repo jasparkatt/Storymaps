@@ -36,10 +36,9 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjand1dnRhbWowMGJtNDNwY
             }
         })
     },
-        GEE: {
-            layer: L.tileLayer('https://api.mapbox.com/styles/v1/jasparkatt/cjxtgxkcs87at1cpoc3b4svt0.html?fresh=true&title=true&access_token=pk.eyJ1IjoiamFzcGFya2F0dCIsImEiOiJ0dFVNWUxvIn0.c2iL93m2nRg0gnqSlm5bhA#8.0/44.716105/-90.012333/0'),
-            legend: forest_legend
-        },
+        hillshade: {
+            layer: L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9')},
+
         satellite: {
             layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
 
@@ -51,11 +50,11 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjand1dnRhbWowMGJtNDNwY
 
     var scenes = {
         overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.class1, layers.counties]},
-        wautoma: {lat: 44.119, lng: -89.45, zoom: 10.5, name: 'Linch Pin Of The Sands', layers: [layers.satellite, layers.class1]},
-        westfork: {lat: 43.5, lng: -90.95, zoom: 10, name: 'Avalanche', layers: [layers.counties, layers.class1]},
-        salem: {lat: 44.09419055, lng: -89.60356407, zoom: 9, name: 'Salem', layers: [layers.counties]},
-        driftless: {lat: 43.5, lng: -90.95, zoom: 9, name: 'The Driftless Area', layers: [layers.ESRI, layers.class1, layers.counties]},
+        centralsands: {lat: 44.09, lng: -89.6, zoom: 9.5, name: 'The Central Sands', layers: [layers.cartodb_light, layers.class1, layers.counties]},
+        wautoma: {lat: 44.061, lng: -89.297, zoom: 11.5, name: 'Heart of the Sands', layers: [layers.hillshade, layers.class1]},
+        westfork: {lat: 43.5, lng: -90.95, zoom: 10, name: 'Avalanche', layers: [layers.ESRI, layers.counties, layers.class1]},
+        salem: {lat: 44.09419055, lng: -89.60356407, zoom: 9, name: 'Salem', layers: [layers.cartodb_light]},
+        driftless: {lat: 43.5, lng: -90.95, zoom: 10.5, name: 'The Driftless Area', layers: [layers.hillshade, layers.class1, layers.counties]},
         wisconsin: {lat: 44.7, lng: -90.95, zoom: 8, name: 'Wisconsin State', layers: [layers.counties]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
