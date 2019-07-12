@@ -1,16 +1,23 @@
 var geojsonMarkerOptions = {
     radius: 4,
-    fillColor: "#f78102",
-    color: "#0a121f",
-    weight: 0.4,
+    fillColor: "#ffd900",
+    color: "#10069f",
+    weight: 1,
     opacity: 0.7,
-    fillOpacity: 0.5
+    fillOpacity: 0.6
 };
+/* var geojsonhillshadeMarkerOptions = {
+    radius: 5,
+    fillColor: "#10069f",
+    color: "#f78102",
+    weight: 0.5,
+    opacity: 0.8,
+    fillOpacity: 0.7
+}; */
 L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjanh6Y3R1dWYwMW82M2Nya3BiajFjYXRsIn0.KfnC6zslYrBhd4L0flo-WA'; 
 
     // Create Legend Contents in html format
-    var county_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Counties</b></p>';
-    var forest_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+    var classLegend ='<p style ="font-weight: bold;">Trout Fishing Wisconsin Key</p><i style="background: #0130b2; opacity: 0.8"></i><p>Class I</p><i style="background: #b16b02; opacity: 0.8"></i><p>Class II</p><i style="background: #e3ae5f; opacity: 0.8"></i><p>Class III</p><i style="background: #f78102; opacity: 0.8"></i><p>Spot X</p><i style="background: #feffcd; opacity: 0.8"></i><p>0 - 25</p>'
 
     // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
     // var layers = {
@@ -38,7 +45,9 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjanh6Y3R1dWYwMW82M2Nya
             layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}')},
 
         class1: {
-            layer: L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89')},
+            layer: L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89'),
+            legend: classLegend
+        },
 
         cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
     };
