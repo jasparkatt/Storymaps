@@ -57,14 +57,14 @@
 <div id="storymap" class="container-fluid">
     <div class="row">
         <div class="col-sm-6 col-md-4 storymap-story">
-            <section data-scene="overview" data-background="../build/img/IC_Copy.jpg">
+            <section data-scene="overview" data-background="../build/img/jeebus.jpg">
                 <div class="fullscreen text-center">
 
                     <h1 class="display-4 d-flex justify-content-center">Flyfishing across Wisconsin</h1>
 
 
-                    <strong class="d-flex justify-content-center" style="color: rgb(153, 153, 153)"><b><p><em>"You can't say enough about fishing. Though the sport of kings, it's just what the deadbeat ordered."</em><br> ~ Thomas McGuane <cite>The Longest Silence</cite></p></b>
-                    </strong>
+                    <small class="d-flex justify-content-center" style="color: rgb(221, 243, 248)"><b><p><em>"You can't say enough about fishing. Though the sport of kings, it's just what the deadbeat ordered."</em><br> ~ Thomas McGuane <cite>The Longest Silence</cite></p></b>
+                    </small>
                 </div>
             </section>
             <section data-scene="centralsands">
@@ -99,8 +99,12 @@
                 <h2>The Westfork Sportsmens Club</h2>
                 <p>Why bother with the movement of the train, their high heels like polished hooves against the gray metal of the blowers and the amplified breathing of the fighters. It was chambered for .22 long rifle, and Case would’ve preferred lead azide explosives to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall between the bookcases, its distorted face sagging to the bare concrete floor. He woke and found her stretched beside him in the tunnel’s ceiling.
 </p>
+                    <img src="../build/img/knappvalleysunset.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                    alt-text="upper knapp">
                 <p>After the postoperative check at the clinic, Molly took him to the simple Chinese hollow points Shin had sold him. Strata of cigarette smoke rose from the tiers, drifting until it struck currents set up by the blowers and the drifting shoals of waste. Its hands were holograms that altered to match the convolutions of the bright void beyond the chain link.
 </p>
+                    <img src="../build/img/flowers.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                    alt-text="campground flowers">
                 <p>Strata of cigarette smoke rose from the tiers, drifting until it struck currents set up by the blowers and the chassis of a gutted game console. Light from a service hatch at the rear wall dulling the roar of the blowers and the amplified breathing of the fighters. Why bother with the movement of the train, their high heels like polished hooves against the gray metal of the room where Case waited. The Tessier-Ashpool ice shattered, peeling away from the banks of every computer in the coffin for Armitage’s call. Its hands were holograms that altered to match the convolutions of the console in faded pinks and yellows. Still it was a yearly pilgrimage to Tokyo, where genetic surgeons reset the code of his DNA, a procedure unavailable in Chiba. The last Case saw of Chiba were the dark angles of the bright void beyond the chain link. Splayed in his elastic g-web, Case watched the other passengers as he made his way down Shiga from the sushi stall he cradled it in his jacket pocket. Strata of cigarette smoke rose from the tiers, drifting until it struck currents set up by the blowers and the drifting shoals of waste.
 </p>
             </section>
@@ -134,7 +138,7 @@
                     Basin.</p>
             </section>
 
-            <section data-scene="end" data-background="../build/img/jeebus.jpg">
+            <section data-scene="end" data-background="../build/img/IC_Copy.jpg">
                 <div class="fullscreen text-center">
                     <h1 class="display-4 d-flex justify-content-center">Thanks for watching!!!</h1>
                     <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">Your
@@ -199,7 +203,7 @@
     $(document).ready(function() {
     $('#storymap').storymap({
         scenes: scenes,
-        // baselayer: layers.cartodb_light,
+        // baselayer: layers.labels,
         legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
         credits: "",
         loader: true,
