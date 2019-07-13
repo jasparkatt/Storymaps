@@ -44,7 +44,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
     <!--mini globle map-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="./src/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
     <script src="./src/globeminimap.js"></script>
 
@@ -216,12 +216,14 @@
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
                 zoomAnimation: true
-            }).setView([44, -120], 7);
+            }).setView([44, -120], 7).setMaxZoom(15).setMinZoom(6.6);
 
             //add an miniglobe
             new L.Control.GlobeMiniMap({
                 marker: 'red',
-                position: 'bottomright'
+                position: 'bottomright',
+                land: '##C99700',
+                water: '##0017C9'
             }).addTo(map);
 
             new L.Control.Zoom({ position: 'bottomright'}).addTo(map);
