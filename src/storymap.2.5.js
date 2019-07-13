@@ -41,7 +41,7 @@
             scalebar: false,
             scrolldown: true,
             progressline: true,
-            mapinteraction: false,
+            mapinteraction: true,
             createMap: function () {
                 var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
                 // L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png').addTo(map);
