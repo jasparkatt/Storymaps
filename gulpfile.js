@@ -7,6 +7,8 @@ const cleanCss = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
 const copy = require('gulp-copy');
+const browserSync = require('browser-sync');
+const del = require('del');
 
 
 
@@ -21,7 +23,8 @@ const files = {
     htmlBuild: './build/',
     cssBuild: './build/style/',
     jsBuild: './build/scripts/',
-    srcBuild: './build/src/'
+    srcBuild: './build/src/',
+    build: './build'
     // imgTemp: './temp/img/'
 }
 
@@ -61,6 +64,20 @@ function copyTask() {
         .pipe(dest(files.srcBuild));
 }
 
+//create our dev server
+function serve() {
+    return browserSync.init({
+        server: './build',
+        open: true,
+        port: 3000
+    });
+}
+
+//clean out build folder
+function clean() {
+    return del([files.build]);
+}
+
 //create some watchers
 function watchImg(){
     watch('./img/', imgTask);
@@ -82,11 +99,15 @@ exports.jsTask = jsTask;
 exports.copyTask = copyTask;
 exports.watchImg = watchImg;
 exports.watchScripts = watchScripts;
+exports.serve = serve;
+exports.clean = clean;
 
 exports.rebuild = series(
+    clean,
     imgTask,
     htmlTask,
     cssTask,
     jsTask,
-    copyTask
+    copyTask,
+    serve
 );
