@@ -2,6 +2,7 @@
 # https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
 
+
 /node_modules/
 /data sources.txt
 /data/
@@ -9,5 +10,4 @@
 /src/
 /style/
 /index.html
-/main.html
 /img/
