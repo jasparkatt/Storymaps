@@ -1,30 +1,18 @@
 var geojsonMarkerOptions = {
     radius: 4,
     fillColor: "#ffd900",
-    color: "#10069f",
+    color: "#000",
     weight: 1,
     opacity: 0.7,
     fillOpacity: 0.6
 };
-/* var geojsonhillshadeMarkerOptions = {
-    radius: 5,
-    fillColor: "#10069f",
-    color: "#f78102",
-    weight: 0.5,
-    opacity: 0.8,
-    fillOpacity: 0.7
-}; */
+
 L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJjanh6Y3R1dWYwMW82M2Nya3BiajFjYXRsIn0.KfnC6zslYrBhd4L0flo-WA'; 
 
     // Create Legend Contents in html format
     var classLegend ='<p style ="font-weight: bold;">Trout Fishing Wisconsin Key</p><i style="background: #0130b2; opacity: 0.8"></i><p>Class I</p><i style="background: #b16b02; opacity: 0.8"></i><p>Class II</p><i style="background: #e3ae5f; opacity: 0.8"></i><p>Class III</p><i style="background: #f78102; opacity: 0.8"></i><p>Spot X</p><i style="background: #feffcd; opacity: 0.8"></i><p>0 - 25</p>'
 
-    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
-    // var layers = {
-    //      layer1: {layer: layer1, legend: legend1},
-    //      layer2: {layer: layer2, legend: legend2}
-    //      ...
-    // }
+
 
     var layers = {
         ESRI: {layer: L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade_Dark/MapServer/tile/{z}/{y}/{x}')},

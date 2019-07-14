@@ -27,3 +27,5 @@ https://raw.githubusercontent.com/jasparkatt/abv/grady-edits/src/data/Class1_min
 https://raw.githubusercontent.com/jasparkatt/Storymaps/master/data/newSpotX.geojson
 
 mapbox://styles/jasparkatt/cjxtgxkcs87at1cpoc3b4svt0
+
+rebuild gulp file so build folder is renamed to docs folder to use for github pages.

@@ -64,14 +64,31 @@ function copyTask() {
         .pipe(dest(files.srcBuild));
 }
 
+//server reload
+function reload(done) {
+    browserSync.reload();
+    done();
+}
+
+function serve(done) {
+    browserSync.init({
+        browserSync: {
+            baseDir: '/build',
+            open: true,
+            port: 3000        
+        }
+    });
+    done();
+}
+
 //create our dev server
-function serve() {
+/* function serve() {
     return browserSync.init({
         server: './build',
         open: true,
         port: 3000
     });
-}
+} */
 
 //clean out build folder
 function clean() {
@@ -85,8 +102,8 @@ function watchImg(){
 };
 
 function watchScripts() {
-    watch([files.htmlPath, files.jsPath, files.cssPath],
-        series(htmlTask, jsTask, cssTask, copyTask)),
+    watch([files.htmlPath, files.jsPath, files.cssPath, files.corePath],
+        series(htmlTask, jsTask, cssTask, copyTask, reload)),
         console.log('updating build folder as something changed in your scripts');
 };
 
@@ -100,14 +117,15 @@ exports.copyTask = copyTask;
 exports.watchImg = watchImg;
 exports.watchScripts = watchScripts;
 exports.serve = serve;
+exports.reload = reload;
 exports.clean = clean;
-
-exports.rebuild = series(
+exports.default = series(
     clean,
     imgTask,
     htmlTask,
     cssTask,
     jsTask,
     copyTask,
-    serve
+    serve,
+    watchScripts
 );
