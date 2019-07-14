@@ -19,12 +19,12 @@ const files = {
     jsPath: './scripts/*.js',
     imgPath: './img/*',
     corePath: './src/*.*',
-    imgBuild: './build/img/',
-    htmlBuild: './build/',
-    cssBuild: './build/style/',
-    jsBuild: './build/scripts/',
-    srcBuild: './build/src/',
-    build: './build'
+    imgBuild: './docs/img/',
+    htmlBuild: './docs/',
+    cssBuild: './docs/style/',
+    jsBuild: './docs/scripts/',
+    srcBuild: './docs/src/',
+    build: './docs'
     // imgTemp: './temp/img/'
 }
 
@@ -73,7 +73,7 @@ function reload(done) {
 function serve(done) {
     browserSync.init({
         browserSync: {
-            baseDir: '/build',
+            baseDir: '/docs',
             open: true,
             port: 3000        
         }

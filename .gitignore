@@ -1,13 +1,13 @@
 # https://git-scm.com/docs/gitignore
 # https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
-/bower_components/
+
 /node_modules/
 /data sources.txt
-/example.html
-
-/index1.html
-/scripts/main1.js
+/data/
+/scripts/
+/src/
+/style/
+/index.html
 /main.html
-/style/main_old.css
 /img/
