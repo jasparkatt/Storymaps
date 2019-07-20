@@ -108,9 +108,9 @@ section {
 .viewing {
     color: #1c1c1c;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-    -moz-opacity: 0.8;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
 }
 
 .fullscreen {
@@ -245,7 +245,7 @@ video {
 }
 
 .storymap-attribution {
-    font-family: Cairo, sans-serif;
+    font-family: Lora, sans-serif;
     background: rgba(255, 255, 255, 0.6) !important;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
@@ -269,7 +269,7 @@ video {
     color: #333333;
     font-family: Cairo, sans-serif;
     padding: 6px 8px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(243, 239, 239);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     border-radius: 2px;
 }

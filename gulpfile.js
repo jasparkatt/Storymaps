@@ -73,7 +73,7 @@ function reload(done) {
 function serve(done) {
     browserSync.init({
         browserSync: {
-            baseDir: '/docs',
+            baseDir: './docs',
             open: true,
             port: 3000        
         }
