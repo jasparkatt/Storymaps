@@ -8,6 +8,7 @@ const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
 const copy = require('gulp-copy');
 const browserSync = require('browser-sync');
+const server = browserSync.create();
 const del = require('del');
 
 
@@ -66,20 +67,18 @@ function copyTask() {
 
 //server reload
 function reload(done) {
-    browserSync.reload();
+    server.reload();
     done();
-}
+  }
 
-function serve(done) {
-    browserSync.init({
-        browserSync: {
-            baseDir: './docs',
-            open: true,
-            port: 3000        
-        }
+  function serve(done) {
+    server.init({
+      server: {
+        baseDir: './docs'
+      }
     });
     done();
-}
+  }
 
 //create our dev server
 /* function serve() {
